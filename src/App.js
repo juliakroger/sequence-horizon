@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Header, Cards, ContactUs } from "./components";
 
-function App() {
+const App = () => {
+  const [mobileHeaderOpen, setMobileHeaderOpen] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={mobileHeaderOpen ? "app-hidden" : ""}>
+      <Header
+        mobileHeaderOpen={mobileHeaderOpen}
+        setMobileHeaderOpen={setMobileHeaderOpen}
+      />
+      <div className="content" onClick={() => setMobileHeaderOpen(false)}>
+        <Cards />
+        <ContactUs />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
