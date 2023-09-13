@@ -1,5 +1,5 @@
-# Horizon Coding Exercise 2022 (FE)
-This project is currently running at https://horizon-assignment.netlify.app
+# Horizon 2022 (FE)
+This project is currently running at [https://horizon-assignment.netlify.app](https://sequence-horizon.netlify.app/)
 
 -------------------------------------------------------------------------------
 
